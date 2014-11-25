@@ -8,7 +8,10 @@ function app(){
         {url: "./bower_components/jquery/dist/jquery.min.js"},
         {url: "./bower_components/lodash/dist/lodash.min.js"},
         {url: "./bower_components/backbone/backbone.js"},
-        {url: "./dist/style.css"}
+        {url: "./dist/style.css"},
+        {url: "./js/firebase.js"},
+        {url: "./js/adoptablePageModel.js"}
+
     ).then(function(){
         _.templateSettings.interpolate = /{([\s\S]+?)}/g;
         document.body.style.opacity = 1;

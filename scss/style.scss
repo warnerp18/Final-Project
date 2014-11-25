@@ -17,6 +17,7 @@
 /**
  * GRIDS
  */
+
 .grid {
     width: 100%;
     display: block;
@@ -42,7 +43,32 @@
 /**
  * GENERAL
  */
+h1 {
+    width: 100%;
+    height: 20%;
+   text-align: center;
+}
+/**
+ * Dog Adoption Page CSS
+ */
 body {
     transition: opacity .25s ease;
 }
-    
+
+.container {
+  position: relative;
+  max-width:1024px;
+}
+
+.availabeDogs {
+    display:inline-block;
+    width: 300px;
+    height: 300px;
+    border:3px solid red;
+    margin:1em;
+}
+
+img {
+   width: 100%;
+}
+
