@@ -7,15 +7,18 @@ function app(){
     loader.load(
         {url: "./bower_components/jquery/dist/jquery.min.js"},
         {url: "./bower_components/lodash/dist/lodash.min.js"},
-        {url: "./bower_components/backbone/backbone.js"},
         {url: "./dist/style.css"},
-        {url: "./js/firebase.js"},
-        {url: "./js/adoptablePageModel.js"}
-
+        {url: "./bower_components/backbone/backbone.js"},
+        {url: "./bower_components/firebase/firebase.js"},
+        {url: "./bower_components/backfire/dist/backbonefire.js"},
+        {url: "./js/adoptablePage.js"},
+        {url: "./dist/style.css"}
     ).then(function(){
         _.templateSettings.interpolate = /{([\s\S]+?)}/g;
         document.body.style.opacity = 1;
+
         // start app?
-    })
+        var appView = new app.AdoptablesCollectionView();
+    });
 }
     

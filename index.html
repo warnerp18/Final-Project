@@ -4,29 +4,37 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./bower_components/typeplate-starter-kit/css/typeplate.css">
-    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
     <title></title>
 </head>
 
 <body style="opacity: 0;">
     <div class="container">
-    <div id="header logo">
-        <h1>Golden Beginnings</h1>
+        <form>
+            <div class='addNewDog'>
+                <input id="name" placeholder="Name" type='text' value="">
+                <input id="age" placeholder="Age" type='text'>
+                <input id="weight" placeholder="Weight" type='text'>
+                <input id="picture" placeholder="Picture" type='text'>
+                <input id="Video" placeholder="" type='text'>
+            </div>
+            <button>add</button>
+        </form>
+        <div id="header logo">
+            <h1>Golden Beginnings</h1>
+            <div class="availableDogsContainer"></div>
+        </div>
     </div>
-        <div class="availabeDogs"><span>Dog Name</span>
-            <div class="image"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuywg68nDAFf_KxycvBGfqN2W3hC3UT9skUsmzxmHfp3y5oieBXg"><br>Age<br>Gender
-            </div>
-        </div>
-        <div class="availabeDogs"><span>Dog Name</span>
-            <div class="image"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuywg68nDAFf_KxycvBGfqN2W3hC3UT9skUsmzxmHfp3y5oieBXg"><br>Age<br>Gender
-            </div>
-        </div>
-        <div class="availabeDogs"><span>Dog Name</span>
-            <div class="image"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuywg68nDAFf_KxycvBGfqN2W3hC3UT9skUsmzxmHfp3y5oieBXg"><br>Age<br>Gender
-            </div>
+
+    <script type="text/template" id="availableDogs-template">
+        <span> {id}</span>
+        <div class="image">
+            <img src="{Picture}">
+            <span<br>{Age}
+            <br>{Gender}</Span>
         </div>
 
-    </div>
+    </script>
+
 
     <script type="text/javascript" src="./bower_components/Loader/loader.js" id="loaderjs" data-app="./js/app.js"></script>
 </body>
