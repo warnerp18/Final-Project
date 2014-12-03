@@ -3,29 +3,50 @@
 
     window.app = window.app || {};
 
+    // This is to add input functions for new dogs
     var AddNewDogView = Backbone.View.extend({
         el: document.querySelector('#addNewDog'),
+        model: AddNewDogModel,
         events: {
             "submit": "addToFirebase"
         },
         addToFirebase: function(event) {
-        	event.preventDefault();
-        	
-        	var values = {
-        	    name: this.el.querySelector('#name').value,
-        	    age: this.el.querySelector('#age').value,
-        	    gender: this.el.querySelector('#gender').value,
-        	    weight: this.el.querySelector('#weight').value,
-        	    picture: this.el.querySelector('#picture').value,
-        	    video: this.el.querySelector('#video').value
-        	}
-        	 
-        	var firebaseCollection = new AdoptablesCollection();
-        	firebaseCollection.create(values)
+            event.preventDefault();
+
+            var values = {
+                id: this.el.querySelector('#name').value,
+                age: this.el.querySelector('#age').value,
+                gender: this.el.querySelector('#gender').value,
+                weight: this.el.querySelector('#weight').value,
+                picture: this.el.querySelector('#picture').value,
+                video: this.el.querySelector('#video').value
+            }
+
+            var firebaseCollection = new AdoptablesCollection();
+            firebaseCollection.create(values)
 
             // this.$el.html(
-            	// this.set({id: this.el.querySelector("name").value})
+            // this.set({id: this.el.querySelector("name").value})
             // )
+        }
+
+    });
+
+    //model to get some validation ---- CURRENTLY NOT WORKING
+
+    var AddNewDogModel = Backbone.Model.extend({
+    	validate: function(attrs){
+            if(!attrs.name){
+                return "Must have a name."
+            }
+            if(!(attrs.addto instanceof app.addToFirebase)){
+                return "todos must be an instance of the Todos Collection."
+            }
+        },
+        initialize: function(){
+            if(!this.get('name')){
+                this.set('name', new app.AddNewDogModel());
+            }
         }
 
     });
@@ -34,9 +55,6 @@
     var AdoptablesModel = Backbone.Model.extend({
         // urlRoot: "https://tiy-final-project.firebaseio.com/Dogs",
         defaults: {
-            name: "Jack",
-            age: "2",
-            gender: "Male",
             picture: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRRsOXZsZAwqOaaDUgdRNaHq6m-F4cnxxjaVFbehy20kPWfryZJ8538tg"
         }
     })
@@ -88,5 +106,6 @@
     app.AdoptablesView = AdoptablesView;
     app.AdoptablesCollectionView = AdoptablesCollectionView;
     app.AddNewDogView = AddNewDogView;
+    app.AddNewDogModel = AddNewDogModel;
 
 })(window, undefined);
