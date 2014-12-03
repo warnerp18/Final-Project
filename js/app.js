@@ -19,6 +19,8 @@ function app(){
 
         // start app?
         var appView = new app.AdoptablesCollectionView();
+        var addNewDogView = new app.AddNewDogView();
+        console.log(addNewDogView);
     });
 }
     
