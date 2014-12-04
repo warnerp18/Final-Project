@@ -11,16 +11,19 @@ function app(){
         {url: "./bower_components/backbone/backbone.js"},
         {url: "./bower_components/firebase/firebase.js"},
         {url: "./bower_components/backfire/dist/backbonefire.js"},
-        {url: "./js/adoptablePage.js"},
+        //{url: "./js/adoptablePage.js"},
+        {url: "./js/goldenBeginnings.js"},
         {url: "./dist/style.css"}
     ).then(function(){
         _.templateSettings.interpolate = /{([\s\S]+?)}/g;
         document.body.style.opacity = 1;
 
         // start app?
-        var appView = new app.AdoptablesCollectionView();
-        var addNewDogView = new app.AddNewDogView();
-        console.log(addNewDogView);
+        // var appView = new app.AdoptablesCollectionView();
+        // var addNewDogView = new app.AddNewDogView();
+        // var deleteDogView = new app.DeleteDogView
+        // console.log(deleteDogView);
+        // console.log(addNewDogView);
     });
 }
     

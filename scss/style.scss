@@ -81,6 +81,20 @@ img {
 .image {
     display: inline-block;
 }
+
+a:hover {
+    color: #00aabb;
+}
+a:visited {
+    color: #303030;
+}
+
+h4 {
+    display: inline-block;
+    position: relative;
+    left: 51%;
+
+}
 /* Input footer */
 
 #addNewDog {

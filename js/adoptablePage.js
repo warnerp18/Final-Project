@@ -3,7 +3,15 @@
 
     window.app = window.app || {};
 
+    // This is to delete dogs from Database
+
+  
+
+
+
+
     // This is to add input functions for new dogs
+
     var AddNewDogView = Backbone.View.extend({
         el: document.querySelector('#addNewDog'),
         model: AddNewDogModel,
@@ -35,21 +43,25 @@
     //model to get some validation ---- CURRENTLY NOT WORKING
 
     var AddNewDogModel = Backbone.Model.extend({
-    	validate: function(attrs){
-            if(!attrs.name){
+        validate: function(attrs) {
+            if (!attrs.name) {
                 return "Must have a name."
             }
-            if(!(attrs.addto instanceof app.addToFirebase)){
+            if (!(attrs.addto instanceof app.addToFirebase)) {
                 return "todos must be an instance of the Todos Collection."
             }
         },
-        initialize: function(){
-            if(!this.get('name')){
+        initialize: function() {
+            if (!this.get('name')) {
                 this.set('name', new app.AddNewDogModel());
             }
         }
 
     });
+
+
+
+    // Below Puts DOG Data onto Page
 
     // single model
     var AdoptablesModel = Backbone.Model.extend({
@@ -67,10 +79,20 @@
         initialize: function(options) {
             this.render();
         },
+        // events: {
+        //     'click #edit': 'editList',
+        //     'click #remove': 'deleteList'
+        // },
+        // deleteList: function() {
+        //     if (confirm('Are you sure you want to delete that list?')) {
+        //         $.AdoptablesModel.destroy();
+        //     }
+        //     return true;
+        // },
 
         render: function() {
             var someHtmlString = _.template(this.templateString, this.model.attributes);
-            console.log(someHtmlString)
+            //console.log(someHtmlString)
 
             this.el.innerHTML = _.template(this.templateString, this.model.attributes);
             return this;
@@ -91,16 +113,40 @@
             this.collection = new AdoptablesCollection();
             this.listenTo(this.collection, "add", this.addOne)
         },
+
         addOne: function(modelFromFirebase, collection, extraOptions) {
-            var v = new AdoptablesView({
+        	var self = this;
+             var v = new AdoptablesView({
                 model: modelFromFirebase
             });
             this.$el.append(v.el);
         },
     });
+      var DeleteDogView = Backbone.View.extend({
+    	el: document.querySelector('#remove'),
+        events: {
+            'click .remove' : 'deleteDog'
+            //'click span' : "doAction"
+        },
+        deleteDog: function(event) {
+        	v.destroy({
+        		success: function() {
+        			router.navigate('', {trigger: true});
+        		}
+        	})
+            return false;
+        }
+    });
+
+    var DeleteDogModel = Backbone.Model.extend ({
+
+
+    });
+
 
 
     // store stuff on app for access in other files
+    app.DeleteDogView = DeleteDogView;
     app.AdoptablesCollection = AdoptablesCollection;
     app.AdoptablesModel = AdoptablesModel;
     app.AdoptablesView = AdoptablesView;
