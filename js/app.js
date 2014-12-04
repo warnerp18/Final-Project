@@ -12,7 +12,7 @@ function app(){
         {url: "./bower_components/firebase/firebase.js"},
         {url: "./bower_components/backfire/dist/backbonefire.js"},
         //{url: "./js/adoptablePage.js"},
-        {url: "./js/goldenBeginnings.js"},
+        {url: "./js/router.js"},
         {url: "./dist/style.css"}
     ).then(function(){
         _.templateSettings.interpolate = /{([\s\S]+?)}/g;
