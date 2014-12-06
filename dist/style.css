@@ -45,7 +45,8 @@ h1 {
  */
 
 body {
-    transition: opacity .25s ease;
+    -webkit-transition: opacity .25s ease;
+            transition: opacity .25s ease;
 }
 .container {
     position: relative;

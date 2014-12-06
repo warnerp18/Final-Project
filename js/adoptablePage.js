@@ -116,10 +116,10 @@
 
         addOne: function(modelFromFirebase, collection, extraOptions) {
         	var self = this;
-             var v = new AdoptablesView({
+             self.v = new AdoptablesView({
                 model: modelFromFirebase
             });
-            this.$el.append(v.el);
+            this.$el.append(self.v.el);
         },
     });
       var DeleteDogView = Backbone.View.extend({
@@ -129,7 +129,7 @@
             //'click span' : "doAction"
         },
         deleteDog: function(event) {
-        	v.destroy({
+        	this.v.destroy({
         		success: function() {
         			router.navigate('', {trigger: true});
         		}
