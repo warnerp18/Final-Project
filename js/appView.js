@@ -6,6 +6,4 @@
 		el: document.body
 	})
 
-	AppView = app.AppView;
-
 })(window, undefined);

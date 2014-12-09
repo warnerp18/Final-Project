@@ -9,43 +9,20 @@
         },
 
         initialize: function() {
-            console.log('router working');
-            
-
+        	// views
             this.appView = new app.AppView();
-            this.dogsCollectionView = new app.DogsCollectionView();
-            console.dir(this.dogsCollectionView)
-            this.dogModel = new app.DogModel();
-           
-            this.dogsView = new app.DogsView({
+            this.dogCollectionView = new app.DogCollectionView();
 
-                collection: this.dogsCollection
-                
-            });
-            
-            this.appView.$el.find('.container').append(this.dogsView.el);
+            // collection
+            this.dogCollection = new app.DogCollection();
 
+            this.addDogView = new app.AddDogView({ collection: this.dogCollection });
 
+            // handle firebase events
+		    this.dogCollectionView.listenTo(this.dogCollection, "sync", this.dogCollectionView.render)
 
-
-
-
+            Backbone.history.start();
         }
     });
-
-
-
-    // router.on('route:editUser', function() {
-
-
-    // });
-
-    Router = app.Router;
-
-
-
-    Backbone.history.start();
-
-
 
 })(window, undefined);

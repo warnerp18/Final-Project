@@ -3,66 +3,66 @@ window.onload = app;
 function app() {
     "use strict";
     // load some scripts (uses promises :D)
-    loader.load({
+    loader.load(
 
-            url: "./bower_components/jquery/dist/jquery.min.js"
-        }, {
-            url: "./bower_components/lodash/dist/lodash.min.js"
-        }, {
-            url: "./dist/style.css"
-        }, {
-            url: "./bower_components/backbone/backbone.js"
-        }, {
-            url: "./bower_components/firebase/firebase.js"
-        }, {
-            url: "./bower_components/backfire/dist/backbonefire.js"
-        },
+        //js  
+        {url: "./bower_components/jquery/dist/jquery.min.js"},
+        {url: "./bower_components/lodash/dist/lodash.min.js"},  
+        {url: "./bower_components/backbone/backbone.js"}, 
+        {url: "./bower_components/firebase/firebase.js"}, 
+        {url: "./bower_components/backfire/dist/backbonefire.js"},  
+        //{url: "./bower_components/jquery/dist/jquery.js"},
+   
+        //{url: "./bower_components/jquery/src/jquery.js"},
+
+         
+        {url: "./bower_components/bootstrap/dist/js/bootstrap.js"},
+        {url: "./bower_components/bootstrap/dist/js/bootstrap.min.js"},
+        //{url: "./bower_components/bootstrap/dist/js/npm.js"},
+        //{url: "./main/js/bootstrap.js"},
+        //{url: "./main/js/bootstrap.min.js"},
+        {url: "./main/js/jquery.js"},
+       
+        //css
+        {url: "./dist/style.css"},
+        //{url: "./main/css/bootstrap.min.css"},
+        //{url: "./main/css/bootstrap.css"},
+        {url: "./main/css/business-casual.css"},
+
+       // {url: "./bower_components/bootstrap/dist/css/bootstrap-theme.css"}, 
+        //{url: "./bower_components/bootstrap/dist/css/bootstrap-theme.css.map"},
+       // {url: "./bower_components/bootstrap/dist/css/bootstrap-theme.min.css"},
+        //{url: "./bower_components/bootstrap/dist/css/bootstrap.css"},
+        //{url: "./bower_components/bootstrap/dist/css/bootstrap.css.map"},
+        {url: "./bower_components/bootstrap/dist/css/bootstrap.min.css"},
+        {url: "./main/fonts/glyphicons-halflins-regular.eot"},
+        {url: "./main/fonts/glyphicons-halflins-regular.svg"},
+        {url: "./main/fonts/glyphicons-halflins-regular.ttf"},
+        {url: "./main/fonts/glyphicons-halflins-regular.woff"},    
+          
+         
         //{url: "./js/adoptablePage.js"},
-
-
         // MODELS
-        {
-            url: "./js/dogsView.js"
-        },
-
-        {
-            url: "./js/dogModel.js"
-        },
+        {url: "./js/dogModel.js"},
 
         // COLLECTIONS
-
-        {
-            url: "./js/dogsCollection.js"
-        }, {
-            url: "./js/dogsCollectionView.js"
-        },
+        {url: "./js/dogCollection.js"},
 
         // ROUTERS
-
-        {
-            url: "./js/router.js"
-        },
+        {url: "./js/router.js"},
 
         // VIEWS
-
-        {
-            url: "./js/appView.js"
-        }, 
-
-
-
-
-        {
-            url: "./dist/style.css"
-        }
+        {url: "./js/dogView.js"},
+        {url: "./js/dogCollectionView.js"}, 
+        {url: "./js/appView.js"},
+        {url: "./js/addDogView.js"}
 
     ).then(function() {
+
         _.templateSettings.interpolate = /{([\s\S]+?)}/g;
         document.body.style.opacity = 1;
 
         var router = new app.Router();
-
-
 
     });
 

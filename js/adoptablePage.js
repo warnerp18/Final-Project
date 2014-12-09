@@ -79,17 +79,6 @@
         initialize: function(options) {
             this.render();
         },
-        // events: {
-        //     'click #edit': 'editList',
-        //     'click #remove': 'deleteList'
-        // },
-        // deleteList: function() {
-        //     if (confirm('Are you sure you want to delete that list?')) {
-        //         $.AdoptablesModel.destroy();
-        //     }
-        //     return true;
-        // },
-
         render: function() {
             var someHtmlString = _.template(this.templateString, this.model.attributes);
             //console.log(someHtmlString)
@@ -98,12 +87,6 @@
             return this;
 
         }
-    });
-
-    // collection of models
-    var AdoptablesCollection = Backbone.Firebase.Collection.extend({
-        url: "https://tiy-final-project.firebaseio.com/Dogs",
-        model: AdoptablesModel
     });
 
     // collection view
@@ -122,6 +105,14 @@
             this.$el.append(self.v.el);
         },
     });
+
+    // collection of models
+    var AdoptablesCollection = Backbone.Firebase.Collection.extend({
+        url: "https://tiy-final-project.firebaseio.com/Dogs",
+        model: AdoptablesModel
+    });
+
+    
       var DeleteDogView = Backbone.View.extend({
     	el: document.querySelector('#remove'),
         events: {

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/typeplate-starter-kit/css/typeplate.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+   
+    <title></title>
+</head>
+
+<body style="opacity: 0;">
+
+    <div class="container">
+        <div id="header logo">
+            <h1>Golden Beginnings</h1>
+            <hr>
+        </div>
+        <div class="dog">
+
+        </div>
+        <form id="addNewDog">
+            <div class='addNewDog'>
+                <input name="name" placeholder="Name" type='text'/>
+                <input name="age" placeholder="Age" type='text'/>
+                <input name="gender" placeholder="Gender" type='text' />
+                <input name="weight" placeholder="Weight" type='text' />
+                <input name="picture" placeholder="Picture" type='text' />
+                <input name="video" placeholder="Youtube URL" type='text' />
+            </div>
+            <button id='button' type='submit'>add</button>
+        </form>
+    </div>
+
+    <script type="text/template" id="dogtemplate">
+        <h6 id="name"> {name} </h6>
+        <img src="{picture}" id="picture">
+        <p id="age"> {age} </p>
+        <p id='gender'>{'gender'}</p>
+        <hr>
+        <button><a href="/edit" class="button">Edit button</a></button>
+    </script>
+
+    <script type="text/javascript" src="./bower_components/Loader/loader.js" id="loaderjs" data-app="./js/app.js"></script>
+
+</body>
+
+</html>
