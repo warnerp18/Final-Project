@@ -6,28 +6,28 @@ function app() {
     loader.load(
 
         //js  
+        {url: "./main/js/jquery.js"},
         {url: "./bower_components/jquery/dist/jquery.min.js"},
         {url: "./bower_components/lodash/dist/lodash.min.js"},  
         {url: "./bower_components/backbone/backbone.js"}, 
         {url: "./bower_components/firebase/firebase.js"}, 
         {url: "./bower_components/backfire/dist/backbonefire.js"},  
         //{url: "./bower_components/jquery/dist/jquery.js"},
-   
         //{url: "./bower_components/jquery/src/jquery.js"},
 
          
         {url: "./bower_components/bootstrap/dist/js/bootstrap.js"},
         {url: "./bower_components/bootstrap/dist/js/bootstrap.min.js"},
-        //{url: "./bower_components/bootstrap/dist/js/npm.js"},
-        //{url: "./main/js/bootstrap.js"},
-        //{url: "./main/js/bootstrap.min.js"},
-        {url: "./main/js/jquery.js"},
+        {url: "./bower_components/bootstrap/dist/js/npm.js"},
+        {url: "./main/js/bootstrap.js"},
+        
        
         //css
         {url: "./dist/style.css"},
-        //{url: "./main/css/bootstrap.min.css"},
-        //{url: "./main/css/bootstrap.css"},
+        {url: "./main/css/bootstrap.min.css"},
+        {url: "./main/css/bootstrap.css"},
         {url: "./main/css/business-casual.css"},
+       
 
        // {url: "./bower_components/bootstrap/dist/css/bootstrap-theme.css"}, 
         //{url: "./bower_components/bootstrap/dist/css/bootstrap-theme.css.map"},
@@ -53,7 +53,8 @@ function app() {
 
         // VIEWS
         {url: "./js/dogView.js"},
-        {url: "./js/dogCollectionView.js"}, 
+        {url: "./js/dogCollectionView.js"},
+        {url: "./js/stripePayment.js"}, 
         {url: "./js/appView.js"},
         {url: "./js/addDogView.js"}
 

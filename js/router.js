@@ -17,6 +17,7 @@
             this.dogCollection = new app.DogCollection();
 
             this.addDogView = new app.AddDogView({ collection: this.dogCollection });
+            this.stripepayment = new app.StripePayment();
 
             // handle firebase events
 		    this.dogCollectionView.listenTo(this.dogCollection, "sync", this.dogCollectionView.render)

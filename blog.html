@@ -45,7 +45,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" id="nbar">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
@@ -82,14 +82,13 @@
 
                     <script type="text/template" id="dogtemplate">
                         <img class="img-responsive img-border img-full" id="picture" src="{picture}">
-                        <h2 id="name"> {name}
+                        <h4 id="name"> Name: {name}
                         <br>
-                        <small id="age"> {age} </small>
+                        <small id="age"> Age: {age} </small>
                         <br>
                         <small id='gender'>{gender} </small>
-                        <h2>
-                        
-                        <a href="#" class="btn btn-default btn-lg">Adopt Me</a>
+                        <h4>
+                        <a target="_blank" href="mailto:warnerp18@gmail.com?subject=Interested in Adoption!&amp;body=Hi! I am contacting you from your site and I'm very interested in adopting. Please get back to me at your soonest convience" class="btn btn-default btn-lg">Adopt Me</a>
                     <hr>
                     </script>
 
@@ -133,26 +132,70 @@
                 </div>
             </div>
         </div>
-        <form id="addNewDog">
-            <div class='addNewDog'>
-                <input name="name" placeholder="Name" type='text'/>
-                <input name="age" placeholder="Age" type='text'/>
-                <input name="gender" placeholder="Gender" type='text' />
-                <input name="weight" placeholder="Weight" type='text' />
-                <input name="picture" placeholder="Picture" type='text' />
-                <input name="video" placeholder="Youtube URL" type='text' />
-            </div>
-            <button id='button' type='submit'>add</button>
-        </form>
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>New Dog Form</strong>
+                    </h2>
+                    <hr>
 
+                    <form role="form" id="addNewDog">
+                        <div class="row" class="addNewDog">
+                            <div class="form-group col-lg-4">
+                                <label>Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Age</label>
+                                <input type="text" class="form-control" name="age" placeholder="Age">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Gender</label>
+                                <input type="tel" class="form-control" name="gender" placeholder="Gender">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Weight</label>
+                                <input type="tel" class="form-control" name="weight" placeholder="Weight">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Picture</label>
+                                <input type="file" class="form-control" name="files[]" placeholder="Picture" multiple="multiple">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Description</label>
+                                <input type="text" class="form-control" name="description" placeholder="Dog Personality Description">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <form action="" method="POST" id="stripePayment">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_IQ8egexbQxhI1P5V2svTNH9y"
+    data-amount="2500"
+    data-name="Demo Site"
+    data-description="Application Fee ($25.00)"
+    data-image="/128x128.png">
+  </script>
+</form>
     <!-- /.container -->
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Get In Touch @ <a href="philwarner.co">My Site</a>&nbsp;•&nbsp;<a href="www.linkedin.com/pub/philip-warner/44/687/1a8/">LinkedIn</a>&nbsp;•&nbsp;<a href="https://twitter.com/warnerp18" target="_blank">Twitter @warnerp18</a>&nbsp;•&nbsp;<a href="https://github.com/warnerp18">Github</a></p>
+                    <p>Get In Touch @ <a href="philwarner.co">My Site</a>&nbsp;•&nbsp;<a href="www.linkedin.com/pub/philip-warner/44/687/1a8/">LinkedIn</a>&nbsp;•&nbsp;<a href="https://twitter.com/warnerp18" target="_blank">Twitter @warnerp18</a>&nbsp;•&nbsp;<a href="https://github.com/warnerp18">Github</a>
+                    </p>
                 </div>
             </div>
         </div>

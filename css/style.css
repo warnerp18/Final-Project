@@ -47,7 +47,7 @@ h1 {
 body {
     transition: opacity .25s ease;
 }
-.container {
+/*.container {
     position: relative;
     max-width: 1024px;
     overflow: visible;
@@ -57,4 +57,4 @@ body {
     display: block;
     width: 100%;
     float: left;
-}
+}*/
