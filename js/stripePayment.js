@@ -2,7 +2,6 @@ var handler = StripeCheckout.configure({
     key: 'pk_test_IQ8egexbQxhI1P5V2svTNH9y',
     image: '../128x128.png',
     token: function(token) {
-        debugger;
         var chargesRef = new Firebase("https://crackling-fire-2133.firebaseio.com/charges");
         chargesRef.push({
             amount: 2000 ,

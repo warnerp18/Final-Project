@@ -19,7 +19,9 @@
                 description: this.el.querySelector('[name="description"]').value
             }
 
+
             this.collection.create(values);
+
             var form = document.getElementById("addNewDog");
             form.reset();
         }

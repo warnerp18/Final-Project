@@ -14,3 +14,12 @@
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }
+
+.dog img{
+          transition: all 1s ease;
+}
+ 
+.dog img:hover {
+ /* -webkit-filter: blur(5px);*/
+   -webkit-filter: grayscale(100%);
+}

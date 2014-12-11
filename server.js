@@ -33,8 +33,6 @@ function startServer() {
     // Stripe-Fire Stuff
     
 
-    // Load Stripe keys
-
     var chargesRef = "https://crackling-fire-2133.firebaseio.com/charges";
 
     var accountData = {
@@ -48,8 +46,6 @@ function startServer() {
 
     var stripeFire = require("./node_modules/stripe-fire")("sk_test_4FoZ1mQyndLWzg88j8EinVl3");
     stripeFire.charges(chargesRef);
-
-    
 
    
 
