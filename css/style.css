@@ -1,60 +1,24 @@
-
-/**
- * BOX-SIZING
- */
-*, *:before, *:after {
-    box-sizing: border-box;
+#customButton {
+  padding: 10px 16px;
+font-size: 18px;
+line-height: 1.33;
+border-radius: 6px;
+color: #333;
+background-color: #fff;
+border-color: #ccc;
+display: inline-block;
+margin-bottom: 0;
+font-weight: normal;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid;
 }
-/**
- * GRIDS
- */
-
-.grid {
-    width: 100%;
-    display: block;
-    font-size: 0;
-    text-align: justify;
-    position: relative;
-    & > * {
-        font-size: medium;
-        text-align: left;
-        display: inline-block;
-        width: 100%;
-        vertical-align: top;
-    }
-    &:after {
-        display: inline-block;
-        width: 100%;
-        content: "";
-        font-size: medium;
-    }
-}
-@include gridify(2, 400);
-@include gridify(4, 600);
-/**
- * GENERAL
- */
-
-h1 {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-}
-/**
- * Dog Adoption Page CSS
- */
-
-body {
-    transition: opacity .25s ease;
-}
-/*.container {
-    position: relative;
-    max-width: 1024px;
-    overflow: visible;
-    padding-bottom:
-}
-.avaliableDogs {
-    display: block;
-    width: 100%;
-    float: left;
-}*/

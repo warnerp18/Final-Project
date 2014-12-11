@@ -12,21 +12,14 @@ function app() {
         {url: "./bower_components/backbone/backbone.js"}, 
         {url: "./bower_components/firebase/firebase.js"}, 
         {url: "./bower_components/backfire/dist/backbonefire.js"},  
-        //{url: "./bower_components/jquery/dist/jquery.js"},
-        //{url: "./bower_components/jquery/src/jquery.js"},
 
-         
         {url: "./bower_components/bootstrap/dist/js/bootstrap.js"},
-        {url: "./bower_components/bootstrap/dist/js/bootstrap.min.js"},
-        {url: "./bower_components/bootstrap/dist/js/npm.js"},
-        {url: "./main/js/bootstrap.js"},
+        //{url: "./bower_components/bootstrap/dist/js/bootstrap.min.js"},
+        //{url: "./bower_components/bootstrap/dist/js/npm.js"},
+        //{url: "./main/js/bootstrap.js"},
         
-       
-        //css
-        {url: "./dist/style.css"},
-        {url: "./main/css/bootstrap.min.css"},
-        {url: "./main/css/bootstrap.css"},
-        {url: "./main/css/business-casual.css"},
+        
+      
        
 
        // {url: "./bower_components/bootstrap/dist/css/bootstrap-theme.css"}, 
@@ -54,9 +47,17 @@ function app() {
         // VIEWS
         {url: "./js/dogView.js"},
         {url: "./js/dogCollectionView.js"},
+        {url: "//checkout.stripe.com/checkout.js"},
         {url: "./js/stripePayment.js"}, 
         {url: "./js/appView.js"},
-        {url: "./js/addDogView.js"}
+        {url: "./js/addDogView.js"},
+
+          //css
+        
+        {url: "./main/css/bootstrap.min.css"},
+        {url: "./main/css/bootstrap.css"},
+        {url: "./main/css/business-casual.css"},
+        {url: "./dist/style.css"}
 
     ).then(function() {
 

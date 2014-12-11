@@ -11,15 +11,15 @@ function startServer() {
         request = require('request'),
         _ = require('lodash');
 
-    function querify(queryParamsObject){
-        return '?'+_.map(queryParamsObject || {}, function(val, key){
-            return key+'='+val
+    function querify(queryParamsObject) {
+        return '?' + _.map(queryParamsObject || {}, function(val, key) {
+            return key + '=' + val
         }).join('&');
     }
 
     // adds a new rule to proxy a localUrl -> webUrl
     // i.e. proxify ('/my/server/google', 'http://google.com/')
-    function proxify(localUrl, webUrl){
+    function proxify(localUrl, webUrl) {
         app.get(localUrl, function(req, res) {
             var url = [
                 webUrl,
@@ -29,6 +29,20 @@ function startServer() {
             req.pipe(request(url)).pipe(res);
         });
     }
+
+    // Stripe-Fire Stuff
+
+    var stripeFire = require("./node_modules/stripe-fire")("./stripeKeys.js");
+
+    var accountData = {
+        secretkey: process.env.secretkey,
+        publishablekey: process.env.publishablekey
+    };
+    if (!accountData.secretkey) {
+        accountData = require("./stripeKeys.js").data;
+    };
+
+    stripeFire.charges("https://crackling-fire-2133.firebaseio.com/charges");
 
     // add your proxies here.
     //
