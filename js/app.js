@@ -31,7 +31,7 @@ function app() {
         {url: "./main/fonts/glyphicons-halflins-regular.eot"},
         {url: "./main/fonts/glyphicons-halflins-regular.svg"},
         {url: "./main/fonts/glyphicons-halflins-regular.ttf"},
-        {url: "./main/fonts/glyphicons-halflins-regular.woff"},    
+        {url: "./main/fonts/glyphicons-halflins-regular.woff"},          
           
         // MODELS
         {url: "./js/dogModel.js"},
