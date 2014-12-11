@@ -31,18 +31,27 @@ function startServer() {
     }
 
     // Stripe-Fire Stuff
+    
 
-    var stripeFire = require("./node_modules/stripe-fire")("./stripeKeys.js");
+    // Load Stripe keys
+
+    var chargesRef = "https://crackling-fire-2133.firebaseio.com/charges";
 
     var accountData = {
-        secretkey: process.env.secretkey,
+        secretkey: "sk_test_4FoZ1mQyndLWzg88j8EinVl3",
         publishablekey: process.env.publishablekey
     };
+
     if (!accountData.secretkey) {
         accountData = require("./stripeKeys.js").data;
     };
 
-    stripeFire.charges("https://crackling-fire-2133.firebaseio.com/charges");
+    var stripeFire = require("./node_modules/stripe-fire")("sk_test_4FoZ1mQyndLWzg88j8EinVl3");
+    stripeFire.charges(chargesRef);
+
+    
+
+   
 
     // add your proxies here.
     //

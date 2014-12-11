@@ -1,24 +1,16 @@
 #customButton {
-  padding: 10px 16px;
-font-size: 18px;
-line-height: 1.33;
-border-radius: 6px;
-color: #333;
-background-color: #fff;
-border-color: #ccc;
-display: inline-block;
-margin-bottom: 0;
-font-weight: normal;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
--ms-touch-action: manipulation;
-touch-action: manipulation;
-cursor: pointer;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-background-image: none;
-border: 1px solid;
+    display: block;
+    min-height: 30px;
+    position: relative;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    background: #1275ff;
+    background-image: linear-gradient(#7dc5ee, #008cdd 85%, #30a2e4);
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
 }

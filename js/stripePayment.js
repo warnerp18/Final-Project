@@ -17,8 +17,8 @@ var handler = StripeCheckout.configure({
 $('#customButton').on('click', function(e) {
     // Open Checkout with further options
     handler.open({
-        name: 'Demo Site',
-        description: '2 widgets ($20.00)',
+        name: 'Golden Beginnings',
+        description: 'Donation ($20.00)',
         amount: 2000
     });
     e.preventDefault();
