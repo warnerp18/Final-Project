@@ -11,14 +11,15 @@
              // gender: 'Male',
              // weight: '60lbs'
          },
-         // validate: function(attr) {
-         //     if (!attr.name && !attr.gender) {
-         //         return 'Must input a name and gender'
-         //     }
-         //     if (!attr.picture) {
-         //         return 'You did not provide a picture'
-         //     }
-         //     }
+ //         validate: function(attr) {
+ //     if (!attr.name && !attr.gender) {
+ //         alert( 'Must input a name and gender')
+ //     }
+ //     if (!attr.picture) {
+ //         return 'You did not provide a picture'
+ //     }
+ // }
+
          
          intialize: function() {
              

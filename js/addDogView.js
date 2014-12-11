@@ -20,6 +20,8 @@
             }
 
             this.collection.create(values);
+            var form = document.getElementById("addNewDog");
+            form.reset();
         }
 
     });

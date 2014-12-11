@@ -33,8 +33,6 @@ function app() {
         {url: "./main/fonts/glyphicons-halflins-regular.ttf"},
         {url: "./main/fonts/glyphicons-halflins-regular.woff"},    
           
-         
-        //{url: "./js/adoptablePage.js"},
         // MODELS
         {url: "./js/dogModel.js"},
 
