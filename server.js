@@ -44,7 +44,7 @@ function startServer() {
         accountData = require("./stripeKeys.js").data;
     };
 
-    var stripeFire = require("./node_modules/stripe-fire")("sk_test_4FoZ1mQyndLWzg88j8EinVl3");
+    var stripeFire = require("stripe-fire")("sk_test_4FoZ1mQyndLWzg88j8EinVl3");
     stripeFire.charges(chargesRef);
 
    
