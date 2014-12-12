@@ -15,7 +15,7 @@
                 age: this.el.querySelector('[name="age"]').value,
                 gender: this.el.querySelector('[name="gender"]').value,
                 weight: this.el.querySelector('[name="weight"]').value,
-                picture: this.el.querySelector('[name="files[]"]').value,
+                picture: this.el.querySelector('[name="picture"]').value,
                 description: this.el.querySelector('[name="description"]').value
             }
 
