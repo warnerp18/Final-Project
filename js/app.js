@@ -11,16 +11,12 @@ function app() {
         {url: "./bower_components/lodash/dist/lodash.min.js"},  
         {url: "./bower_components/backbone/backbone.js"}, 
         {url: "./bower_components/firebase/firebase.js"}, 
-        {url: "./bower_components/backfire/dist/backbonefire.js"},  
-
+        {url: "./bower_components/backfire/dist/backbonefire.js"},
         {url: "./bower_components/bootstrap/dist/js/bootstrap.js"},
         //{url: "./bower_components/bootstrap/dist/js/bootstrap.min.js"},
         //{url: "./bower_components/bootstrap/dist/js/npm.js"},
         //{url: "./main/js/bootstrap.js"},
-        
-        
-      
-       
+
 
        // {url: "./bower_components/bootstrap/dist/css/bootstrap-theme.css"}, 
         //{url: "./bower_components/bootstrap/dist/css/bootstrap-theme.css.map"},
@@ -34,21 +30,23 @@ function app() {
         {url: "./main/fonts/glyphicons-halflins-regular.woff"},          
           
         // MODELS
-        {url: "./js/dogModel.js"},
+        {url: "./js/models/dogModel.js"},
 
         // COLLECTIONS
-        {url: "./js/dogCollection.js"},
+        {url: "./js/collection/dogCollection.js"},
 
         // ROUTERS
         {url: "./js/router.js"},
 
         // VIEWS
-        {url: "./js/dogView.js"},
-        {url: "./js/dogCollectionView.js"},
+        {url: "./js/views/dogView.js"},
+        {url: "./js/views/dogCollectionView.js"},
         {url: "//checkout.stripe.com/checkout.js"},
         {url: "./js/stripePayment.js"}, 
-        {url: "./js/appView.js"},
-        {url: "./js/addDogView.js"},
+        {url: "./js/views/appView.js"},
+        {url: "./js/views/addDogView.js"},
+        {url: "./js/views/SingleDogView.js"},
+        {url: "./js/views/SingleCollectionView.js"},
 
           //css
         
@@ -65,14 +63,4 @@ function app() {
         var router = new app.Router();
 
     });
-
-
-
-    //start app
-    // var appView = new app.AdoptablesCollectionView();
-    // var adoptablesView = new app.AdoptablesView();
-    // var addNewDogView = new app.AddNewDogView();
-    // var deleteDogView = new app.DeleteDogView();
-    // console.log(deleteDogView);
-    // console.log(addNewDogView);
 };

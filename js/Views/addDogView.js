@@ -1,5 +1,4 @@
-;
-(function(window, undefined) {
+;(function(window, undefined) {
     window.app = window.app || {};
 
     app.AddDogView = Backbone.View.extend({
@@ -19,10 +18,12 @@
                 description: this.el.querySelector('[name="description"]').value
             }
 
+            // this will create a view for dog after info is put into Form and submitted.
+            // also add dog info into Firebase
+            this.collection.create(values); 
 
-            this.collection.create(values);
-
-            var form = document.getElementById("addNewDog");
+            // this clears form after hitting submit
+            var form = document.getElementById("addNewDog"); 
             form.reset();
         }
 
