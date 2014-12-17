@@ -19,6 +19,7 @@
 .dog img{
           -webkit-transition: all 1s ease;
                   transition: all 1s ease;
+          
 }
  
 .dog img:hover {
@@ -28,8 +29,4 @@
 
 .avaliableDogs {
     display: none;
-}
-
-.activeCustom, .activeCustom > * {
-   
 }

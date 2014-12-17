@@ -17,6 +17,7 @@
 
 .dog img{
           transition: all 1s ease;
+          
 }
  
 .dog img:hover {

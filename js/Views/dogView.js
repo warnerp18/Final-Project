@@ -25,14 +25,11 @@
         },
 
         openDogInfo: function(event) {
-            console.log(app.SingleDogView);
-            console.dir(app.SingleDogView.options);
-
            
             var dogInfo = new app.SingleDogView({model: this.model});
             $('.availableDogs').css('display','none');
-            dogInfo.el.classList.add('activeCustom');
-            this.el.classList.remove('activeCustom');
+            //dogInfo.el.classList.add('activeCustom');
+            //this.el.classList.remove('activeCustom');
             $(".dog").append(dogInfo.el);
 
           

@@ -46,7 +46,6 @@ function app() {
         {url: "./js/views/appView.js"},
         {url: "./js/views/addDogView.js"},
         {url: "./js/views/SingleDogView.js"},
-        {url: "./js/views/SingleCollectionView.js"},
 
           //css
         
