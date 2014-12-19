@@ -40,12 +40,12 @@ function app() {
 
         // VIEWS
         {url: "./js/Views/dogView.js"},
-        {url: "./js/views/dogCollectionView.js"},
+        {url: "./js/Views/dogCollectionView.js"},
         {url: "//checkout.stripe.com/checkout.js"},
         {url: "./js/stripePayment.js"}, 
-        {url: "./js/views/appView.js"},
-        {url: "./js/views/addDogView.js"},
-        {url: "./js/views/SingleDogView.js"},
+        {url: "./js/Views/appView.js"},
+        {url: "./js/Views/addDogView.js"},
+        {url: "./js/Views/SingleDogView.js"},
 
           //css
         
