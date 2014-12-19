@@ -39,7 +39,7 @@ function app() {
         {url: "./js/router.js"},
 
         // VIEWS
-        {url: "./js/views/dogView.js"},
+        {url: "./js/Views/dogView.js"},
         {url: "./js/views/dogCollectionView.js"},
         {url: "//checkout.stripe.com/checkout.js"},
         {url: "./js/stripePayment.js"}, 
