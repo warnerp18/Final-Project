@@ -1,15 +1,23 @@
-;
-(function(window, undefined) {
+;(function(window, undefined) {
     window.app = window.app || {};
 
     app.Router = Backbone.Router.extend({
         routes: {
-            'dog/:id': 'getDog',
+            'dog/:id': 'avaliabledog',
+            'dogs/' : 'availableDogs',
             '/': 'home'
         },
 
-        getDog: function(id) {
+        //this is to see one paticular dog
+        avaliabledog: function(id) {
             this.singleCollectionView.render();
+        },
+
+        //this is to see all dogs
+        //this is to navigate back to dog collection view when hitting back
+        //need to check once I have internet access
+        availableDogs: function() {
+            this.dogCollectionView.render();
         },
 
         initialize: function() {
